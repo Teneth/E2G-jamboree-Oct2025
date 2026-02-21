@@ -429,12 +429,13 @@ CreateStateIntersectFile <- function(Sample_file= Sample_df,
       print("Writing output")
     
     write.table(final.e2g.table, gzfile(paste0(outdir,Exp.Name, "E2G_table.with.ChromHMM.state.overlap.features.txt.gz")),
-                sep="\t", quote=F)
+                sep="\t", quote=F, row.names=F)
     }
   
     final.e2g.table
   }
   
+
 
 
 
