@@ -23,7 +23,7 @@ library(reshape2)
 
 # Usage
 ```
-source("/location/2025.12_E2G_chromhmm_overlap_function_v0.21.R")
+source("/location/2025.12_E2G_chromhmm_overlap_function_v0.22.R")
 
 Sample_df <- fread("/location/your_region_file.txt",
                                   sep="\t")
@@ -46,6 +46,7 @@ Defaults for parameters are as shown. If you wish to load a different state mode
 
 # Use downloaded data
 ```
+## If you don't want to redownload the State model each time-
 ## Prepare the downloaded file like this then you can use DownloadVuModel=F and ProvideModel=chrohmm.table options
 chromhmm.table <- fread(paste0("/projectdir/havu_chromhmm_100state.bed.gz"), sep="\t")
 colnames(chromhmm.table) <- c("chr", "start", "end", "state")
